@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainapp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pomodro app</title>
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="javascript/jquery-1.8.3.min.js"></script>
+    <script src="javascript/app.js" ></script>>
+    <style>
+      .col-centered {
+        display:inline-block;
+        float:none;
+      }
+    </style>
+  </head>
+  <body ng-controller="mainCtrl">
+    <div class="container-fluid">
+      <h2 class="text-primary text-center">When you are wasting time, someone is working at the same time and the day you compete with that person, you will lose</h2>
+      <div class="row text-center">
+        <div class ="center">
+          <div class="col-xs-3 col-centered">
+            <h4 class="text-info">Set No of Intervals</h4>
+            <div class="well" id="left-well">
+              <button class="btn btn-default" ng-click="toggle(1,'break')">+</button>
+              <lable>{{breakLength}}</lable>
+              <button class="btn btn-default" ng-click="toggle(-1,'break')">-</button>
+            </div>
+          </div>
+          <div class="col-xs-3 col-centered">
+            <h4 class="text-info">Set Interval Time</h4>
+            <div class="well" id="right-well">
+              <button class="btn btn-default" ng-click="toggle(1,'interval')">+</button>
+              <label>{{intervalLength}}</label>
+              <button class="btn btn-default" ng-click="toggle(-1,'interval')">-</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class ="col col-centered">
+            <button class="btn btn-default" ng-click="toggleTimer()">startTimer</button>
+            <lable>{{timeLeft}}</lable>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
