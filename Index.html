@@ -18,7 +18,7 @@
   </head>
   <body ng-controller="mainCtrl">
     <div class="container-fluid">
-      <h2 class="text-primary text-center">When you are wasting time, someone is working at the same time and the day you compete with that person, you will lose</h2>
+      <h2 class="text-primary text-center">Pomodoro-Clock</h2>
       <div class="row text-center">
         <div class ="center">
           <div class="col-xs-3 col-centered">
@@ -43,6 +43,7 @@
         <div class ="col col-centered">
             <button class="btn btn-default" ng-click="toggleTimer()">startTimer</button>
             <lable>{{timeLeft}}</lable>
+            <button class="btn btn-default" ng-click="toggleTimer()">stopTimer</button>
         </div>
       </div>
     </div>
